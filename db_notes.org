@@ -1,0 +1,35 @@
+* Entities
+** Rider
+*** Permanent stuff
+    - First Name (Including MI?)
+    - Last Name
+    - Hometown (City, State, Country)
+    - Birthdate
+*** Temporary stuff
+    - Number (How often does this change?)
+    - Team (How often does this change?)
+    - Manufacturer (Of the bike he rides? Does he ride bikes from multiple manufacturers? It might be better for this attribute to belong to this rider's performance in an event.)
+*** Statistics
+    - Championships (Motocross, Supercross, and I'm assuming Combined refers to events that are a combination of both.) (This will probably be better stored as a relation with a Championship entity.)
+    - Best Season Finish (Should probably be a key for the relation with Championship.)
+    - Starts (What is this specifically?)
+    - ELO Rating Stuff (Current Season MX, SX. Career MX, SX, Combined. Should Current Season also have a combined?) (It might be better for this to be derived information, but maybe not. If not, I'll probably do this with a trigger on entry of a new Rider/Championship relation)
+    - Wins, Podiums, Average Finishing Position, all for MX and SX (Can probably just keep track of the finishing position in each race and calculate the rest on the fly as needed)
+** Team
+   - Manufacturer (Does this change often?)
+   - Riders (Will just be stored as relation to Rider entity. Can maybe have an attribute in the relation to track if the rider is current or past?)
+** Manufacturer
+   Does any info need to be stored about manufacturers? Bike models, maybe? Idk.
+** Venue
+   - Race Type: Motocross or Supercross. (Or both? Can you do that?)
+   - Location
+   - Surface Type: Hard-packed, Loamy, or Soft.
+** Season
+   Probably will have a relation with Race.
+   - Year (Is this enough to uniquely identify a season? Maybe when paired with whether the season is MX or SX?)
+** Series
+   How do these work? Many series in one season?
+** Race
+   Will have relation with Venue entity.
+   - Round Number (What has the rounds? An event?)
+   - Date
