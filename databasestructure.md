@@ -57,10 +57,10 @@ that should be done dynamically. I'm probably missing some stats that would be n
     * Combined
   
 ##Team
-*Manufacturer
-*Riders
-  *Current
-  *Past riders by year
+* Manufacturer
+* Riders
+  * Current
+  * Past riders by year
 
 ##Manufacturer
 
