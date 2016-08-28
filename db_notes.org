@@ -33,3 +33,6 @@
    Will have relation with Venue entity.
    - Round Number (What has the rounds? An event?)
    - Date
+* Miscellaneous
+** Supercross
+   There are multiple (17 currently) rounds per season. Each round has 4 races: the heat, the semis, the LCQs, and the main event. Only the main event ultimately matters at the end of the series.
