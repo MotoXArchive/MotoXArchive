@@ -36,3 +36,5 @@
 * Miscellaneous
 ** Supercross
    There are multiple (17 currently) rounds per season. Each round has 4 races: the heat, the semis, the LCQs, and the main event. Only the main event ultimately matters at the end of the series.
+** Between-race switching
+   Pretty much everything seems up in the air between races. Riders can switch bikes, can switch from 250 to 450, can switch teams, whatever, between races. 
