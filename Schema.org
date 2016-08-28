@@ -1,0 +1,21 @@
+* Entity tables
+Rider(_riderID_, first_name, last_name, date_of_birth, currentTeam)
+Bike(_bikeID_, manufacturer, model, year, engineSize, horsePower)
+Team(_teamID_, teamName, manufacturer)
+SXRound(_roundSeason, roundNum_, /venueID/)
+SXSeason(_seasonYear_)
+SXVenue(_venueID_, venueName, venueDescription)
+MXRound(_roundSeason, roundNum_, /venueID/)
+MXSeason(_seasonyear_)
+MXVenue(_venueID_, venueName, venueDescription)
+* Relation tables
+SXRaces(_riderID, roundNumber, roundSeason_, ...)
+* Hangups
+** Team: manufacturer
+   Do teams ever change manufacturers mid-season? Might have to track a team's manufacturer differently.
+** MXSeason and SXSeason
+   Does anything really need to be stored here? If it's just a table with a list of years there's no reason to have this entity. I guess we could store final rankings when a season finishes?
+** SXRound and MXRound
+   Should maybe do something to differentiate between a round that has happened and a round that hasn't happened and is just planned.
+** SXVenue and MXVenue
+   Do these really need to be separate tables?
