@@ -9,7 +9,8 @@ MXRound(_roundSeason, roundNum_, /venueID/)
 MXSeason(_seasonyear_)
 MXVenue(_venueID_, venueName, venueDescription)
 * Relation tables
-SXRaces(_riderID, roundNumber, roundSeason_, ...)
+SXRaces(_riderID, roundNumber, roundSeason_, 250heatNum, 450heatNum, 250heatPlace, 450heatPlace, semiPlace, 250LCQPlace, 450LCQPlace, 250FinalPlace, 450FinalPlace)
+MXRaces(_riderID, roundNumber, roundSeason_, 250Moto1Place, 250Moto2Place, 450Moto1Place, 450Moto2Place)
 * Hangups
 ** Team: manufacturer
    Do teams ever change manufacturers mid-season? Might have to track a team's manufacturer differently.
