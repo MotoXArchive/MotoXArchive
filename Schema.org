@@ -1,16 +1,65 @@
 * Entity tables
-Rider(_riderID_, first_name, last_name, date_of_birth, currentTeam)
-Bike(_bikeID_, manufacturer, model, year, engineSize, horsePower)
-Team(_teamID_, teamName, manufacturer)
-SXRound(_roundSeason, roundNum_, /venueID/)
-SXSeason(_seasonYear_)
-SXVenue(_venueID_, venueName, venueDescription)
-MXRound(_roundSeason, roundNum_, /venueID/)
-MXSeason(_seasonyear_)
-MXVenue(_venueID_, venueName, venueDescription)
+** Rider
+   - _riderID_: Integer
+   - first_name: String(100)
+   - last_name: String(100)
+   - date_of_birth: Date
+   - currentTeam: String(100)
+** Bike
+   - _bikeID_: Integer
+   - manufacturer: String(100)
+   - model: String(100)
+   - year: Integer
+   - engineSize: Integer
+   - horsePower: Integer
+** Team
+   - _teamID_: Integer
+   - teamName: String(100)
+   - manufacturer: String(100)
+** SXRound
+   - _roundSeason_: Integer
+   - _roundNum_: Integer
+   - /venueID/: Integer
+** SXSeason
+   - _seasonYear_: Integer
+** SXVenue
+   - _venueID_: Integer
+   - venueName: String(100)
+   - venueDescription: String(1000)
+** MXRound
+   - _roundSeason_: Integer
+   - _roundNum_: Integer
+   - /venueID/: Integer
+** MXSeason
+   - _seasonYear_: Integer
+** MXVenue
+   - _venueID_: Integer
+   - venueName: String(100)
+   - venueDescription: String(1000)
 * Relation tables
-SXRaces(_riderID, roundNumber, roundSeason_, 250heatNum, 450heatNum, 250heatPlace, 450heatPlace, semiPlace, 250LCQPlace, 450LCQPlace, 250FinalPlace, 450FinalPlace)
-MXRaces(_riderID, roundNumber, roundSeason_, 250Moto1Place, 250Moto2Place, 450Moto1Place, 450Moto2Place)
+** SXRaces
+   - _riderID_: Integer
+   - _roundNumber_: Integer
+   - _roundSeason_: Integer
+   - heatNum250: Integer
+   - heatNum450: Integer
+   - heatPlace250: Integer
+   - heatPlace450: Integer
+   - semiPlace250: Integer
+   - semiPlace450: Integer
+   - LCQPlace250: Integer
+   - LCQPlace450: Integer
+   - finalPlace250: Integer
+   - finalPlace450: Integer
+** MXRaces
+   - _riderID_: Integer
+   - _roundNumber_: Integer
+   - _roundSeason_: Integer
+   - Moto1Place250: Integer
+   - Moto1Place450: Integer
+   - Moto2Place250: Integer
+   - Moto2Place450: Integer
+
 * Hangups
 ** Team: manufacturer
    Do teams ever change manufacturers mid-season? Might have to track a team's manufacturer differently.
